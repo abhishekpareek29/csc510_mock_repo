@@ -271,14 +271,12 @@ def getEmptyPercentage(filename):
 def getNumberDuplication(filename):
     file = open(filename, "r")
     for line in file:
-        if "|nb duplicated lines      |" in line:
             output = line.split('|')
             return output[2]
 
 def getPercentDuplication(filename):
     file = open(filename, "r")
     for line in file:
-        if "|percent duplicated lines |" in line:
             output = line.split('|')
             return output[2]
 
