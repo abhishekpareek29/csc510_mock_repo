@@ -17,7 +17,7 @@ def getFileNames(user_name, repository, path, old_dir):
     currentPath = currentPath + '/downloaded_data/'
     old_dir = old_dir
     if os.path.exists(currentPath) and old_dir:
-        shutil.rmtree(currentPath)
+        shutil.rmtree(currentPath
 
     if old_dir:
         try:
@@ -28,7 +28,7 @@ def getFileNames(user_name, repository, path, old_dir):
             print ("Successfully created the directory {} ".format(currentPath))
             old_dir = False
 
-    for branches in responseJson:
+    for branches in responseJson
         if(branches.get('type') == 'file'):
             if re.findall("py$", branches.get('name')):
                 print(branches.get('path'))
